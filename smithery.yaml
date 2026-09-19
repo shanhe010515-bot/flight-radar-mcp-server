@@ -1,0 +1,54 @@
+name: flight-radar-mcp-server
+
+displayName: Flight Radar MCP Server
+
+description: Real-time aircraft radar MCP server powered by OpenSky Network and FastMCP
+
+version: 1.0.0
+
+author: shanhe010515-bot
+
+homepage: https://github.com/shanhe010515-bot/flight-radar-mcp-server
+
+license: MIT
+
+categories:
+  - aviation
+  - data
+
+tags:
+  - flight
+  - aircraft
+  - radar
+  - opensky
+  - fastmcp
+  - real-time
+
+runtime: container
+
+build:
+  dockerfile: Dockerfile
+  dockerBuildPath: .
+
+startCommand:
+  type: http
+
+tools:
+
+  - name: scan_airspace
+    description: Scan real-time aircraft in a specified geographic area
+
+  - name: get_aircraft_state
+    description: Get the real-time state of an aircraft by ICAO24 identifier
+
+  - name: find_aircraft_by_callsign
+    description: Find aircraft by callsign within a specified geographic area
+
+  - name: get_nearest_aircraft
+    description: Find the aircraft nearest to a specified coordinate
+
+  - name: get_highest_aircraft
+    description: Find the highest aircraft in a specified geographic area
+
+  - name: get_fastest_aircraft
+    description: Find the fastest aircraft in a specified geographic area
